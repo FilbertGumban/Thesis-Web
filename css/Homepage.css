@@ -1,0 +1,100 @@
+
+*, *:before, *:after {
+	box-sizing:border-box;
+}
+
+body {
+			background-image: url(../imgs/Background.jpg);
+      font-family: Proxima Nova;
+      margin:0;
+         }
+h1 {
+	text-align: center;
+	color: white;
+	font-size: 20px;
+}
+.container {
+			max-width:1000px;
+		  margin-right:auto;
+		  margin-left:auto;
+		  display:flex;
+		  justify-content:center;
+		  align-items:center;
+		  min-height:100vh;
+}
+
+.table {
+			width:100%;
+			border:1px solid #EEEEEE;
+}
+
+.table-header{
+		  display: flex;
+		  width:100%;
+		  background: #000;
+		  padding:(12 * 1.5) 0;
+}
+
+.table-row {
+	display:flex;
+	width:100%;
+	padding:(12 * 1.5) 0;
+}
+
+.table-row:nth-child(odd) {
+	background:#EEEEEE;
+}
+
+.table-row:nth-child(even) {
+	background:#A9A9A9;
+}
+
+.table-data, .header-item {
+			flex: 1 1 20%;
+}
+
+.header-item {
+  		text-transform:uppercase;
+}
+
+.table-data {
+  		color: black;
+			margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			justify-content: space-between;
+}
+
+.filter-link {
+			color:white;
+			text-decoration: none;
+			position:relative;
+			display:inline-block;
+			padding-left:24px;
+			padding-right:24px;
+
+			&::after {
+				content:'';
+				position:absolute;
+				right:-(12 * 1.5);
+				color:white;
+				font-size:12;
+				top: 50%;
+				transform: translateY(-50%);
+	}
+
+&.desc::after {
+				content: '(desc)';
+	}
+
+&.asc::after {
+				content: '(asc)';
+	}
+
+}
+
+.chart-container {
+	background-color: white;
+	width: 1080px;
+	height: auto;
+}
